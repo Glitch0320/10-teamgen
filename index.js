@@ -1,4 +1,4 @@
-// The end goal is a team object populated by one manager and any number of engineers and interns
+// The end goal is an html string populated by one manager and any number of engineers and interns
 class Employee {
     constructor(name, id, email) {
         this.name = name
@@ -26,4 +26,17 @@ class Intern extends Employee {
         super(name, id, email)
         this.school = school
     }
+}
+
+// Given a response from a prompt object
+// const generateTeam = () => {
+//  Generate html string using values from response
+// }
+
+module.exports = {
+    Employee,
+    Manager,
+    Engineer,
+    Intern,
+    generateTeam
 }

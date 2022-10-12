@@ -1,5 +1,4 @@
-const { describe } = require('yargs')
-const index = require('../index')
+const { Employee, Manager, Engineer, Intern } = require('../index')
 // GIVEN a command-line application that accepts user input
 
 // WHEN I start the application
@@ -26,6 +25,9 @@ const index = require('../index')
 // I will need to test a team object containing multiple Employees
 
 // I will need to test a class of Employee(name, id, email)
+
+/* CLASSES */
+
 describe('Employee', () => {
     it('should return an object with name, id, and email properties', () => {
         // Arrange
@@ -75,5 +77,22 @@ describe('Intern', () => {
 
         // Act
         expect(Me).toEqual(Jon) 
+    })
+})
+
+/* FUNCTIONS */
+
+// I will need to test a function generateHTML(team)
+describe('generateHTML', () => {
+    it('should create an html file given a team array', () => {
+        // Arrange
+        const team = [
+            new Manager('Jon', 1, 'test@gmail.com', 132),
+            new Engineer('Jon', 2, 'test@gmail.com', 'Glitch0320'),
+            new Intern('Jon', 3, 'test@gmail.com', 'Harvard, UofMN')
+        ]
+
+        const html = ``
+
     })
 })
