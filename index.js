@@ -29,9 +29,9 @@ class Intern extends Employee {
 }
 
 // Given a response from a prompt object
-// const generateTeam = () => {
-//  Generate html string using values from response
-// }
+const generateTeam = (team) => {
+//  Generate html string using values from a team array
+}
 
 module.exports = {
     Employee,
