@@ -1,4 +1,4 @@
-const { Employee, Manager, Engineer, Intern, generateTeam } = require('../index')
+const { Employee, Manager, Engineer, Intern } = require('../index')
 
 /* CLASSES */
 
@@ -54,19 +54,4 @@ describe('Intern', () => {
     })
 })
 
-/* FUNCTIONS */
-
-// I will need to test a function generateHTML(team)
-describe('generateHTML', () => {
-    it('should create an html file given a team array', () => {
-        // Arrange
-        const team = [
-            new Manager('Jon', 1, 'test@gmail.com', 132),
-            new Engineer('Jon', 2, 'test@gmail.com', 'Glitch0320'),
-            new Intern('Jon', 3, 'test@gmail.com', 'Harvard, UofMN')
-        ]
-
-        const html = ``
-
-    })
-})
+// Add getName(), getId(), getEmail(), and getRoll()
