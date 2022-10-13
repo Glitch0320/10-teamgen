@@ -2,6 +2,9 @@
 ## Description
 This project allows for the quick creation of an html page that organizes information for a team of developers.
 
+## Video Link
+https://drive.google.com/file/d/1kOTVLSGIWm-kVAersZN4pSy7-2IM-QIT/view
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)

@@ -3,7 +3,7 @@ const { Employee, Manager, Engineer, Intern } = require('../index')
 /* CLASSES */
 
 describe('Employee', () => {
-    it('should return an object with name, id, and email properties as well as getName, getId, getEmail, and getRole', () => {
+    it('should return an object with name, id, and email properties', () => {
         // Arrange
         const Jon = { name: 'Jon', id: 1, email: 'test@gmail.com' }
 
