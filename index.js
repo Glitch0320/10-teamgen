@@ -7,7 +7,7 @@ const que1 = [
     {
         name: 'title',
         type: 'input',
-        message: 'Team name'  
+        message: 'Team name'
     },
     {
         name: 'name',
@@ -68,7 +68,7 @@ const queEng = [
         name: 'github',
         type: 'input',
         message: 'Engineer github'
-    } 
+    }
 ]
 
 const queInt = [
@@ -91,7 +91,7 @@ const queInt = [
         name: 'education',
         type: 'input',
         message: 'Intern education'
-    } 
+    }
 ]
 
 class Employee {
@@ -132,6 +132,7 @@ let r2
 
 const generateHTML = async () => {
     const r1 = await inq.prompt(que1)
+    team.name = r1.title
     team.members.push(new Manager(r1.name, r1.id, r1.email, r1.office))
     do {
         // Ask to add new employee at least once
@@ -154,7 +155,7 @@ const generateHTML = async () => {
         }
         r2 = await inq.prompt(que2)
         add = r2.d2 ? true : false
-    } while (add); 
+    } while (add);
     html = `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -171,7 +172,7 @@ const generateHTML = async () => {
             </header>
             <main class="row justify-content-around">`
     team.members.forEach(employee => {
-        switch (employee.getRole()) {
+        switch (employee.constructor.name) {
             case 'Manager':
                 html += `<div class="col m-2 border border-3 border-info rounded bg-success p-2 text-info">
                 <h2 class="text-primary">${employee.name}</h2>
