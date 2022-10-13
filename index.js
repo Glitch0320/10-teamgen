@@ -149,7 +149,7 @@ const generateHTML = async () => {
                 team.members.push(engineer)
             } else {
                 let int = await inq.prompt(queInt)
-                intern = new Intern(int.name, int.id, int.email, int.education)
+                intern = new Intern(int.name, int.id, int.email, int.school)
                 team.members.push(intern)
             }
         }
@@ -174,7 +174,7 @@ const generateHTML = async () => {
     team.members.forEach(employee => {
         switch (employee.constructor.name) {
             case 'Manager':
-                html += `<div class="col m-2 border border-3 border-info rounded bg-success p-2 text-info">
+                html += `<div class="col col-11 col-sm-5 col-m-3 col-xxl-2 border border-3 border-info rounded bg-success p-2 m-1 text-info">
                 <h2 class="text-primary">${employee.name}</h2>
                 <h3 class="text-dark">Manager</h3>
                 <p>Email: ${employee.email}</p>
@@ -182,7 +182,7 @@ const generateHTML = async () => {
             </div>`
                 break
             case 'Engineer':
-                html += `<div class="col m-2 border border-3 border-info rounded bg-success p-2 text-info" text-info>
+                html += `<div class="col col-11 col-sm-5 col-m-3 col-xxl-2 border border-3 border-info rounded bg-success p-2 m-1 text-info" text-info>
                 <h2 class="text-primary">${employee.name}</h2>
                 <h3 class="text-dark">Engineer</h3>
                 <p>Email: ${employee.email}</p>
@@ -190,7 +190,7 @@ const generateHTML = async () => {
             </div>`
                 break
             default:
-                html += `<div class="col m-2 border border-3 border-info rounded bg-success p-2 text-info">
+                html += `<div class="col col-11 col-sm-5 col-m-3 col-xxl-2 border border-3 border-info rounded bg-success p-2 m-1 text-info">
                 <h2 class="text-primary">${employee.name}</h2>
                 <h3 class="text-dark">Intern</h3>
                 <p>Email: ${employee.email}</p>
